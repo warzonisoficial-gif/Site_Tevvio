@@ -22,16 +22,16 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#07080F;--bg2:#0D0F1A;--blue:#1D6BFF;--cyan:#00D4FF;--green:#10B981;--white:#FFFFFF;--gray:#8B9CB3}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;max-width:100%;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;width:100%;max-width:100vw;z-index:1000;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;gap:.75rem;transition:all .4s}
 nav.scrolled{background:rgba(7,8,15,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,212,255,.1)}
-.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:.1em;text-decoration:none;color:var(--white)}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:.1em;text-decoration:none;color:var(--white);flex-shrink:0}
 .nav-logo span{color:var(--cyan)}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--gray);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s}
 .nav-links a:hover{color:var(--cyan)}
-.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;padding:.6rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.5rem;box-shadow:0 0 20px rgba(37,211,102,.3);transition:all .3s}
+.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;padding:.6rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.5rem;box-shadow:0 0 20px rgba(37,211,102,.3);transition:all .3s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(37,211,102,.5)}
 #hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
@@ -189,7 +189,7 @@ section{padding:5rem 5%}
 .faq-item.open .faq-a{max-height:300px}
 .faq-a p{color:var(--gray);font-size:.9rem;line-height:1.75;padding-bottom:1.4rem}
 footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5rem 5%}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1.2fr 1.1fr 1fr;gap:3rem;margin-bottom:2.5rem}
 .footer-logo{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:.6rem}
 .footer-logo span{color:var(--cyan)}
 .footer-slogan-line{color:var(--cyan);font-size:.85rem;font-weight:600;font-style:italic;margin-bottom:.8rem;letter-spacing:.02em}
@@ -221,11 +221,15 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
   .nums-grid{grid-template-columns:repeat(2,1fr)}
   .prod-header{grid-template-columns:1fr}
 }
+.hamburger{display:none}
 @media(max-width:768px){
+  nav{padding:.85rem 4%}
+  .nav-logo{font-size:1.35rem}
+  .nav-cta{padding:.48rem .95rem;font-size:.78rem;margin-left:auto}
   .nav-links{display:none}
   .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,8,15,.98);backdrop-filter:blur(20px);justify-content:center;align-items:center;gap:2.5rem;z-index:999}
   .nav-links.open a{font-size:1.4rem;color:var(--white)}
-  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:none;padding:.4rem}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:none;padding:.4rem;flex-shrink:0}
   .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
   .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .hamburger.open span:nth-child(2){opacity:0}
@@ -239,7 +243,6 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
   .footer-bottom{flex-direction:column;text-align:center}
   .pcb-body{padding:2rem}
 }
-.hamburger{display:none}
 </style>
 </head>
 <body>
@@ -574,7 +577,7 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
 </section>
 
 <footer>
-  <div class="footer-grid" style="grid-template-columns:2fr 1.2fr 1.1fr 1fr">
+  <div class="footer-grid">
     <div>
       <div class="footer-logo">TEV<span>V</span>IO</div>
       <p class="footer-slogan-line">Para quem vive de vender movimento.</p>
