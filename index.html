@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tevvio — Tecnologia para Concessionárias</title>
+<meta name="description" content="Três produtos SaaS criados exclusivamente para concessionárias: Taggon (captação de leads), Audita Fácil (gestão com IA) e Sticker Car (fidelização pós-vendas). Implantação no mesmo dia, sem equipe de TI."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://tevvio.com.br/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://tevvio.com.br/"/>
+<meta property="og:title" content="Tevvio — Tecnologia para Concessionárias"/>
+<meta property="og:description" content="Taggon, Audita Fácil e Sticker Car: o ecossistema SaaS 100% automotivo que cobre captação, gestão e fidelização. Implantação imediata."/>
+<meta property="og:image" content="https://i.ibb.co/zyDyKG2/Chat-GPT-Image-16-de-abr-de-2026-18-49-49.png"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Tevvio — Tecnologia para Concessionárias"/>
+<meta name="twitter:description" content="O ecossistema SaaS 100% automotivo: Taggon, Audita Fácil e Sticker Car."/>
+<meta name="twitter:image" content="https://i.ibb.co/zyDyKG2/Chat-GPT-Image-16-de-abr-de-2026-18-49-49.png"/>
+<link rel="icon" type="image/png" href="https://i.ibb.co/PZD0kJyP/Chat-GPT-Image-21-de-abr-de-2026-13-29-51.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07080F;--bg2:#0D0F1A;--blue:#1D6BFF;--cyan:#00D4FF;--green:#10B981;--white:#FFFFFF;--gray:#8B9CB3}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.scrolled{background:rgba(7,8,15,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,212,255,.1)}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:.1em;text-decoration:none;color:var(--white)}
+.nav-logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;padding:.6rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.5rem;box-shadow:0 0 20px rgba(37,211,102,.3);transition:all .3s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(37,211,102,.5)}
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,15,.38) 0%,rgba(7,8,15,.62) 55%,rgba(7,8,15,1) 100%)}
+#particles{position:absolute;inset:0;z-index:1}
+.hero-content{position:relative;z-index:2;max-width:900px;padding:0 1.5rem}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.35);color:var(--cyan);padding:.45rem 1.1rem;border-radius:50px;font-size:.8rem;font-weight:600;letter-spacing:.06em;margin-bottom:1.8rem}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:blink 1.5s infinite}
+h1.hero-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,6vw,5.2rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem;min-height:2.4em}
+.cyan{color:var(--cyan)}
+.hero-slogan{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.1rem,2.2vw,1.4rem);color:rgba(255,255,255,.75);font-weight:500;font-style:italic;margin-bottom:1rem;letter-spacing:.01em;opacity:0;animation:fadeSlogan 1s ease forwards 2.5s}
+@keyframes fadeSlogan{from{opacity:0;transform:translateY(10px)}to{opacity:.75;transform:translateY(0)}}
+.hero-sub{color:rgba(210,225,240,.9);font-size:clamp(1rem,2vw,1.15rem);line-height:1.8;max-width:600px;margin:0 auto 2.5rem;opacity:0}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0}
+.scroll-arrow{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--gray);font-size:1.4rem;animation:bounce 2s infinite;z-index:2}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;padding:.85rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .3s;box-shadow:0 0 30px rgba(29,107,255,.4);display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 45px rgba(0,212,255,.5)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.35);color:#fff;padding:.85rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .3s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+section{padding:5rem 5%}
+.section-tag{display:inline-block;color:var(--cyan);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.2;margin-bottom:1rem}
+.section-sub{color:var(--gray);font-size:1.05rem;line-height:1.7;max-width:580px}
+#quem-somos{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+.about-text p{color:var(--gray);font-size:.97rem;line-height:1.9;margin-bottom:1.1rem}
+.about-text p strong{color:#fff}
+.about-quote{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;border-left:3px solid var(--cyan);padding-left:1.2rem;margin:1.8rem 0;line-height:1.5}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:2rem}
+.about-stat{background:rgba(0,212,255,.05);border:1px solid rgba(0,212,255,.14);border-radius:14px;padding:1.2rem 1.4rem;transition:border-color .3s}
+.about-stat:hover{border-color:rgba(0,212,255,.35)}
+.about-stat-val{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;font-weight:700;color:var(--cyan);line-height:1}
+.about-stat-lbl{color:var(--gray);font-size:.78rem;margin-top:.3rem;line-height:1.4}
+.about-img-wrap{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,212,255,.1)}
+.about-img-wrap img{width:100%;height:480px;object-fit:cover;display:block;transition:transform .7s}
+.about-img-wrap:hover img{transform:scale(1.04)}
+.about-img-wrap::after{content:'';position:absolute;inset:0;border-radius:20px;border:1px solid rgba(0,212,255,.2);pointer-events:none}
+#produtos{background:var(--bg)}
+.prod-header{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:4rem}
+.prod-header .section-sub{margin:0}
+.prod-showcase{display:flex;flex-direction:column;gap:2.5rem}
+.prod-card-big{display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:var(--bg2);transition:all .45s;position:relative}
+.prod-card-big:hover{border-color:rgba(255,255,255,.15);box-shadow:0 30px 80px rgba(0,0,0,.55);transform:translateY(-4px)}
+.prod-card-big.reverse .pcb-img{order:2}
+.prod-card-big.reverse .pcb-body{order:1}
+.pcb-img{position:relative;overflow:hidden;min-height:400px}
+.pcb-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.prod-card-big:hover .pcb-img img{transform:scale(1.06)}
+.pcb-img-fade{position:absolute;inset:0;pointer-events:none}
+.prod-card-big:not(.reverse) .pcb-img-fade{background:linear-gradient(90deg,transparent 55%,var(--bg2) 100%)}
+.prod-card-big.reverse .pcb-img-fade{background:linear-gradient(270deg,transparent 55%,var(--bg2) 100%)}
+.pcb-accent{position:absolute;top:0;left:0;right:0;height:3px}
+.pcb-body{padding:3rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:1.1rem;position:relative}
+.pcb-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .85rem;border-radius:50px;font-size:.7rem;font-weight:700;letter-spacing:.1em;border:1px solid;width:fit-content}
+.pcb-name{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;line-height:1}
+.pcb-tagline{font-size:1rem;font-weight:600;color:#fff;line-height:1.4}
+.pcb-desc{color:var(--gray);font-size:.9rem;line-height:1.75}
+.pcb-features{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.3rem 0}
+.pcb-features li{display:flex;align-items:center;gap:.65rem;font-size:.86rem;color:rgba(210,225,240,.8)}
+.pcb-features li .dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.pcb-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.7rem;border-radius:50px;font-size:.88rem;font-weight:700;text-decoration:none;transition:all .3s;border:1.5px solid;margin-top:.4rem;width:fit-content}
+.pcb-num{position:absolute;bottom:1.5rem;right:2rem;font-family:'Space Grotesk',sans-serif;font-size:7rem;font-weight:700;opacity:.04;line-height:1;pointer-events:none}
+.stickercar .pcb-accent{background:linear-gradient(90deg,#FF8000,#FFAA33)}
+.stickercar .pcb-badge{background:rgba(255,128,0,.1);color:#FF8000;border-color:rgba(255,128,0,.3)}
+.stickercar .pcb-name{color:#FF8000}
+.stickercar .pcb-features li .dot{background:#FF8000}
+.stickercar .pcb-cta{color:#FF8000;border-color:rgba(255,128,0,.4);background:rgba(255,128,0,.06)}
+.stickercar .pcb-cta:hover{background:rgba(255,128,0,.14);transform:translateX(5px);box-shadow:0 0 25px rgba(255,128,0,.2)}
+.taggon .pcb-accent{background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.taggon .pcb-badge{background:rgba(0,212,255,.1);color:var(--cyan);border-color:rgba(0,212,255,.3)}
+.taggon .pcb-name{color:var(--cyan)}
+.taggon .pcb-features li .dot{background:var(--cyan)}
+.taggon .pcb-cta{color:var(--cyan);border-color:rgba(0,212,255,.4);background:rgba(0,212,255,.06)}
+.taggon .pcb-cta:hover{background:rgba(0,212,255,.14);transform:translateX(5px);box-shadow:0 0 25px rgba(0,212,255,.2)}
+.audita .pcb-accent{background:linear-gradient(90deg,var(--green),#34D399)}
+.audita .pcb-badge{background:rgba(16,185,129,.1);color:var(--green);border-color:rgba(16,185,129,.3)}
+.audita .pcb-name{color:var(--green)}
+.audita .pcb-features li .dot{background:var(--green)}
+.audita .pcb-cta{color:var(--green);border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.06)}
+.audita .pcb-cta:hover{background:rgba(16,185,129,.14);transform:translateX(5px);box-shadow:0 0 25px rgba(16,185,129,.2)}
+#diferenciais{background:var(--bg2)}
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.diff-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:2rem;transition:all .4s;position:relative;overflow:hidden}
+.diff-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan));opacity:0;transition:opacity .3s}
+.diff-card:hover{border-color:rgba(0,212,255,.22);background:rgba(0,212,255,.03);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.diff-card:hover::after{opacity:1}
+.diff-icon{font-size:2.1rem;margin-bottom:1rem}
+.diff-card h3{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:.55rem}
+.diff-card p{color:var(--gray);font-size:.87rem;line-height:1.65}
+#ecossistema{position:relative;overflow:hidden;text-align:center}
+.eco-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.eco-overlay{position:absolute;inset:0;background:rgba(7,8,15,.91)}
+.eco-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
+.eco-nodes{display:flex;align-items:center;justify-content:center;gap:0;margin:3rem 0;flex-wrap:wrap}
+.eco-node{border-radius:18px;padding:1.8rem 2.5rem;text-align:center;flex:1;min-width:180px;transition:transform .3s}
+.eco-node:hover{transform:translateY(-5px)}
+.eco-node-icon{font-size:2rem;margin-bottom:.6rem}
+.eco-node-name{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.25rem}
+.eco-node-role{font-size:.78rem;color:var(--gray)}
+.eco-node.t{background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.25)}
+.eco-node.t .eco-node-name{color:var(--cyan)}
+.eco-node.a{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.25)}
+.eco-node.a .eco-node-name{color:var(--green)}
+.eco-arrow{color:rgba(0,212,255,.4);font-size:1.8rem;padding:0 1.2rem;align-self:center}
+.eco-quote{border:1px solid rgba(0,212,255,.14);background:rgba(0,212,255,.04);border-radius:16px;padding:1.5rem 2rem;color:rgba(200,215,230,.8);font-size:1rem;line-height:1.85;margin:0 0 2.5rem}
+#numeros{position:relative;overflow:hidden}
+.nums-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nums-overlay{position:absolute;inset:0;background:rgba(7,8,15,.87)}
+.nums-inner{position:relative;z-index:1;text-align:center}
+.nums-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem;margin-top:3rem}
+.num-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2.2rem 1.2rem;backdrop-filter:blur(10px);transition:all .4s}
+.num-card:hover{border-color:rgba(0,212,255,.4);transform:translateY(-6px);box-shadow:0 16px 50px rgba(0,0,0,.4)}
+.num-value{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:var(--cyan);line-height:1;margin-bottom:.4rem}
+.num-label{color:var(--gray);font-size:.83rem;font-weight:500;line-height:1.45}
+#manifesto{background:var(--bg2)}
+.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.manifesto-text{border-left:3px solid var(--cyan);padding-left:2rem}
+.manifesto-text p{color:var(--gray);line-height:1.9;font-size:.97rem;margin-bottom:1.2rem}
+.manifesto-hl{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:700;color:#fff;margin:1.5rem 0;line-height:1.4}
+.manifesto-img-wrap{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,212,255,.1)}
+.manifesto-img-wrap img{width:100%;height:450px;object-fit:cover;display:block;transition:transform .7s}
+.manifesto-img-wrap:hover img{transform:scale(1.04)}
+.manifesto-img-wrap::after{content:'';position:absolute;inset:0;border-radius:20px;border:1px solid rgba(0,212,255,.2);pointer-events:none}
+#depoimentos{background:var(--bg2)}
+.dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.dep-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:2rem;transition:all .4s;position:relative}
+.dep-card:hover{border-color:rgba(0,212,255,.25);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.dep-stars{color:#FFD700;font-size:1rem;margin-bottom:1rem;letter-spacing:2px}
+.dep-text{color:rgba(210,225,240,.85);font-size:.92rem;line-height:1.75;margin-bottom:1.5rem;font-style:italic}
+.dep-text::before{content:'"';font-size:2rem;color:var(--cyan);line-height:0;vertical-align:-.5rem;margin-right:.2rem;font-style:normal}
+.dep-author{display:flex;align-items:center;gap:.8rem}
+.dep-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.dep-name{font-weight:600;font-size:.9rem}
+.dep-role{color:var(--gray);font-size:.78rem;margin-top:.15rem}
+@media(max-width:1024px){.dep-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.dep-grid{grid-template-columns:1fr}}
+#faq{background:var(--bg)}
+.faq-wrap{max-width:760px;margin:3rem auto 0}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:'Inter',sans-serif;font-size:.97rem;font-weight:500;text-align:left;padding:1.4rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .3s}
+.faq-q:hover{color:var(--cyan)}
+.faq-icon{color:var(--cyan);font-size:1.3rem;flex-shrink:0;transition:transform .3s;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{color:var(--gray);font-size:.9rem;line-height:1.75;padding-bottom:1.4rem}
+footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5rem 5%}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:.6rem}
+.footer-logo span{color:var(--cyan)}
+.footer-slogan-line{color:var(--cyan);font-size:.85rem;font-weight:600;font-style:italic;margin-bottom:.8rem;letter-spacing:.02em}
+.footer-about{color:var(--gray);font-size:.87rem;line-height:1.7;max-width:280px;margin-top:.4rem}
+.footer-col h4{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(139,156,179,.5);margin-bottom:1rem}
+.footer-col a{display:block;color:var(--gray);text-decoration:none;font-size:.87rem;margin-bottom:.55rem;transition:color .3s}
+.footer-col a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{color:rgba(139,156,179,.35);font-size:.78rem}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:9999;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.5);animation:waPulse 2s infinite;transition:transform .3s}
+.wa-float:hover{transform:scale(1.15);animation:none}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.reveal{opacity:0;transform:translateY(38px);transition:all .75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 40px rgba(37,211,102,.9)}}
+@media(max-width:1024px){
+  .prod-card-big{grid-template-columns:1fr}
+  .prod-card-big .pcb-img{min-height:240px}
+  .prod-card-big.reverse .pcb-img{order:0}
+  .prod-card-big.reverse .pcb-body{order:0}
+  .prod-card-big .pcb-img-fade{background:linear-gradient(180deg,transparent 55%,var(--bg2) 100%)!important}
+  .about-grid{grid-template-columns:1fr}
+  .about-img-wrap{display:none}
+  .manifesto-grid{grid-template-columns:1fr}
+  .manifesto-img-wrap{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nums-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-header{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,8,15,.98);backdrop-filter:blur(20px);justify-content:center;align-items:center;gap:2.5rem;z-index:999}
+  .nav-links.open a{font-size:1.4rem;color:var(--white)}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:none;padding:.4rem}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  section{padding:4rem 5%}
+  .diff-grid{grid-template-columns:1fr}
+  .nums-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .eco-nodes{flex-direction:column;align-items:center}
+  .eco-arrow{transform:rotate(90deg)}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .pcb-body{padding:2rem}
+}
+.hamburger{display:none}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#" class="nav-logo">TEV<span>V</span>IO</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#quem-somos">Quem Somos</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#manifesto">Manifesto</a></li>
+  </ul>
+  <a href="https://wa.me/5541996800907" class="nav-cta" target="_blank">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.413A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.29-.174-3.007.854.854-2.939-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.406-5.846c-.241-.12-1.427-.703-1.648-.784-.221-.08-.382-.12-.543.12-.16.241-.623.784-.764.945-.14.16-.281.18-.522.06-.241-.12-1.018-.375-1.94-1.196-.717-.638-1.201-1.427-1.342-1.668-.14-.241-.015-.371.106-.491.109-.108.241-.281.362-.422.12-.14.16-.241.241-.402.08-.16.04-.301-.02-.422-.06-.12-.543-1.307-.744-1.79-.196-.47-.395-.406-.543-.414l-.462-.008c-.16 0-.422.06-.643.301-.221.241-.844.824-.844 2.01 0 1.186.864 2.332.985 2.493.12.16 1.7 2.596 4.12 3.641.576.248 1.025.396 1.375.507.578.184 1.104.158 1.52.096.463-.069 1.427-.583 1.628-1.146.2-.563.2-1.045.14-1.146-.06-.1-.221-.16-.462-.281z"/></svg>
+    Fale Conosco
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="hero">
+  <img class="hero-img" src="https://i.ibb.co/zyDyKG2/Chat-GPT-Image-16-de-abr-de-2026-18-49-49.png" alt="Vias expressas iluminadas à noite" fetchpriority="high"/>
+  <div class="hero-overlay"></div>
+  <canvas id="particles"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge">Tecnologia 100% automotiva</div>
+    <h1 class="hero-title" id="hero-title"></h1>
+    <p class="hero-slogan" id="hero-slogan">Tev<span style="color:var(--cyan)">v</span>io, para quem vive de vender movimento.</p>
+    <p class="hero-sub" id="hero-sub">Somos uma empresa de tecnologia especializada em concessionárias. Três produtos construídos de dentro pra fora — ouvindo quem realmente opera no dia a dia.</p>
+    <div class="hero-btns" id="hero-btns">
+      <a href="#produtos" class="btn-primary">Conheça nossos produtos</a>
+    </div>
+  </div>
+  <div class="scroll-arrow">↓</div>
+</section>
+
+<section id="quem-somos">
+  <div class="section-tag reveal">Quem somos</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-title reveal">Uma empresa feita de<br><span class="cyan">dentro pra fora.</span></div>
+      <p class="reveal">A Tev<span style="color:var(--cyan)">v</span>io nasceu de uma percepção direta: <strong>o mercado automotivo merecia tecnologia feita pra ele</strong> — não adaptações de ferramentas genéricas criadas para todo mundo e que, por isso, não servem bem para ninguém.</p>
+      <p class="reveal">Cada produto foi desenvolvido dentro das concessionárias. Ouvimos vendedores, auditores, gestores de grupo e consultores de pós-venda. O resultado são soluções que o time abraça porque fazem sentido no dia a dia real.</p>
+      <div class="about-quote reveal">"Nosso foco é o setor automotivo. Nada mais, nada menos."</div>
+      <div class="about-stats reveal">
+        <div class="about-stat"><div class="about-stat-val">3</div><div class="about-stat-lbl">produtos no ecossistema</div></div>
+        <div class="about-stat"><div class="about-stat-val">100%</div><div class="about-stat-lbl">foco automotivo</div></div>
+        <div class="about-stat"><div class="about-stat-val">24/7</div><div class="about-stat-lbl">sistemas ativos</div></div>
+        <div class="about-stat"><div class="about-stat-val">LGPD</div><div class="about-stat-lbl">conformidade total</div></div>
+      </div>
+    </div>
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80&fit=crop" alt="Concessionária premium à noite"/>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="prod-header">
+    <div>
+      <div class="section-tag reveal">Nossos produtos</div>
+      <div class="section-title reveal">Três produtos.<br><span class="cyan">Um ecossistema completo.</span></div>
+    </div>
+    <p class="section-sub reveal">Cada solução resolve um problema crítico da operação. Funcionam de forma independente — e são ainda mais poderosos juntos.</p>
+  </div>
+  <div class="prod-showcase">
+    <div class="prod-card-big taggon reveal">
+      <div class="pcb-img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80&fit=crop" alt="Tablet com dados de captação de leads"/>
+        <div class="pcb-img-fade"></div>
+      </div>
+      <div class="pcb-body">
+        <div class="pcb-badge">🎯 CAPTAÇÃO DE LEADS</div>
+        <div class="pcb-name">Taggon</div>
+        <div class="pcb-tagline">Transforme interesse em venda —<br>antes que o cliente vá para o concorrente.</div>
+        <p class="pcb-desc">Plataforma de captura de leads via QR Code para feirões, exposições e eventos. O visitante escaneia, demonstra interesse e entra direto no seu funil — com follow-up automático via WhatsApp.</p>
+        <ul class="pcb-features">
+          <li><span class="dot"></span>QR Code inteligente por estande e evento</li>
+          <li><span class="dot"></span>Captura automática sem intervenção da equipe</li>
+          <li><span class="dot"></span>Follow-up automático via WhatsApp</li>
+          <li><span class="dot"></span>Dashboard de leads e geolocalização em tempo real</li>
+        </ul>
+        <a href="https://tagoon.netlify.app/" class="pcb-cta" target="_blank">Acessar Taggon →</a>
+        <div class="pcb-num">01</div>
+      </div>
+    </div>
+    <div class="prod-card-big audita reverse reveal">
+      <div class="pcb-img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=900&q=80&fit=crop" alt="Dashboard de auditoria interna"/>
+        <div class="pcb-img-fade"></div>
+        <div class="pcb-accent"></div>
+      </div>
+      <div class="pcb-body">
+        <div class="pcb-badge">✅ GESTÃO & COMPLIANCE</div>
+        <div class="pcb-name">Audita Fácil</div>
+        <div class="pcb-tagline">Para o gestor chegar preparado<br>na auditoria da montadora.</div>
+        <p class="pcb-desc">App SaaS que digitaliza auditorias internas com rastreabilidade em tempo real. IA Gemini gera planos de ação automaticamente, relatórios em Excel saem prontos e cada grupo tem base de dados exclusiva — em conformidade com a LGPD.</p>
+        <ul class="pcb-features">
+          <li><span class="dot"></span>Checklist personalizado por montadora (Conforme / NC / NA)</li>
+          <li><span class="dot"></span>IA Gemini gera plano de ação automaticamente</li>
+          <li><span class="dot"></span>Relatórios em Excel gerados ao fim de cada auditoria</li>
+          <li><span class="dot"></span>Base exclusiva por grupo — dados 100% isolados</li>
+        </ul>
+        <a href="https://auditafacil.netlify.app/" class="pcb-cta" target="_blank">Acessar Audita Fácil →</a>
+        <div class="pcb-num">02</div>
+      </div>
+    </div>
+    <div class="prod-card-big stickercar reveal">
+      <div class="pcb-img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=900&q=80&fit=crop" alt="Cliente recebendo chaves em concessionária"/>
+        <div class="pcb-img-fade"></div>
+        <div class="pcb-accent"></div>
+      </div>
+      <div class="pcb-body">
+        <div class="pcb-badge">🚗 FIDELIZAÇÃO PÓS-VENDAS</div>
+        <div class="pcb-name">Sticker Car <span style="font-size:1.4rem;opacity:.8">2.0</span></div>
+        <div class="pcb-tagline">Cada revisão vale mais —<br>fidelize o cliente antes que ele vá embora.</div>
+        <p class="pcb-desc">Plataforma de fidelidade por pontos para pós-vendas de concessionárias. O cliente acumula pontos a cada serviço e resgata benefícios — tudo via QR Code no próprio carro, sem app, sem login complicado.</p>
+        <ul class="pcb-features">
+          <li><span class="dot"></span>QR Code individual por veículo</li>
+          <li><span class="dot"></span>R$ 1 = 1 ponto — regra simples e transparente</li>
+          <li><span class="dot"></span>Alertas de inatividade e revisão atrasada</li>
+          <li><span class="dot"></span>Portal do cliente seguro — placa + CPF, sem senha</li>
+        </ul>
+        <a href="https://stickercar.netlify.app/" class="pcb-cta" target="_blank">Acessar Sticker Car →</a>
+        <div class="pcb-num">03</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="section-tag reveal">Por que a Tev<span style="color:var(--cyan)">v</span>io</div>
+  <div class="section-title reveal">Tecnologia que o mercado<br><span class="cyan">ainda não entregava.</span></div>
+  <p class="section-sub reveal">Não somos mais um SaaS genérico com uma vertical automotiva. Somos automotivo desde a primeira linha de código.</p>
+  <div class="diff-grid">
+    <div class="diff-card reveal"><div class="diff-icon">🏎️</div><h3>100% automotivo</h3><p>Tudo que desenvolvemos nasceu dentro de concessionárias para resolver problemas reais do setor. Sem adaptações, sem atalhos.</p></div>
+    <div class="diff-card reveal"><div class="diff-icon">🤖</div><h3>Inteligência Artificial embarcada</h3><p>O Audita Fácil usa IA Gemini para gerar planos de ação automaticamente. Sem trabalho manual, sem risco de esquecimento.</p></div>
+    <div class="diff-card reveal"><div class="diff-icon">⚡</div><h3>Implantação imediata</h3><p>Nenhum produto exige equipe de TI. A operação começa no mesmo dia da contratação — sem projetos longos ou treinamentos técnicos.</p></div>
+    <div class="diff-card reveal"><div class="diff-icon">🔒</div><h3>LGPD e segurança de dados</h3><p>Cada grupo tem base de dados exclusiva e isolada. Seus dados não se misturam com os de nenhum outro cliente, jamais.</p></div>
+    <div class="diff-card reveal"><div class="diff-icon">📊</div><h3>Dados em tempo real</h3><p>Do lead capturado no feirão ao score da auditoria interna — tudo visível ao vivo para gestores tomarem decisões com informação.</p></div>
+    <div class="diff-card reveal"><div class="diff-icon">🤝</div><h3>Suporte direto e próximo</h3><p>Implementação acompanhada pela nossa equipe. Atendemos pelo WhatsApp — direto, rápido, sem fila de tickets nem chamados.</p></div>
+  </div>
+</section>
+
+<section id="ecossistema" style="padding:5rem 5%;position:relative;overflow:hidden;text-align:center">
+  <img loading="lazy" class="eco-bg-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&fit=crop" alt=""/>
+  <div class="eco-overlay"></div>
+  <div class="eco-inner">
+    <div class="section-tag reveal" style="display:block">Ecossistema</div>
+    <div class="section-title reveal" style="max-width:600px;margin:0 auto 1rem">Bom com um.<br><span class="cyan">Imbatível com os três.</span></div>
+    <p class="section-sub reveal" style="margin:0 auto 2.5rem;max-width:520px">Cada produto funciona de forma independente. Juntos, cobrem o ciclo completo da concessionária — da captação à fidelização.</p>
+    <div class="eco-nodes reveal">
+      <div class="eco-node t"><div class="eco-node-icon">🎯</div><div class="eco-node-name">Taggon</div><div class="eco-node-role">Capta o lead no evento</div></div>
+      <div class="eco-arrow">→</div>
+      <div class="eco-node a"><div class="eco-node-icon">✅</div><div class="eco-node-name">Audita Fácil</div><div class="eco-node-role">Garante a operação pronta</div></div>
+      <div class="eco-arrow">→</div>
+      <div class="eco-node" style="background:rgba(255,128,0,.07);border:1px solid rgba(255,128,0,.25)"><div class="eco-node-icon">🚗</div><div class="eco-node-name" style="color:#FF8000">Sticker Car</div><div class="eco-node-role">Fideliza o cliente</div></div>
+    </div>
+    <div class="eco-quote reveal">O Taggon capta o lead no evento. O Audita Fácil garante que a operação está pronta para recebê-lo. O Sticker Car fecha o ciclo — fidelizando quem já é cliente e garantindo que ele volte sempre.</div>
+    <div class="reveal"><a href="https://wa.me/5541996800907" class="btn-primary" target="_blank">Quero conhecer o ecossistema</a></div>
+  </div>
+</section>
+
+<section id="numeros" style="padding:5rem 5%;position:relative;overflow:hidden">
+  <img loading="lazy" class="nums-bg-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&fit=crop" alt=""/>
+  <div class="nums-overlay"></div>
+  <div class="nums-inner">
+    <div class="section-tag reveal" style="display:block">Tev<span style="color:var(--cyan)">v</span>io em números</div>
+    <div class="section-title reveal">Focados. Especializados.<br><span class="cyan">100% automotivo.</span></div>
+    <div class="nums-grid">
+      <div class="num-card reveal"><div class="num-value"><span class="counter" data-target="3">0</span></div><div class="num-label">Produtos no ecossistema</div></div>
+      <div class="num-card reveal"><div class="num-value"><span class="counter" data-target="100">0</span>%</div><div class="num-label">Foco exclusivo no setor automotivo</div></div>
+      <div class="num-card reveal"><div class="num-value">Hoje</div><div class="num-label">Dias para implantar — começa no mesmo dia</div></div>
+      <div class="num-card reveal"><div class="num-value">24/7</div><div class="num-label">Sistemas ativos monitorando sua operação</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="manifesto">
+  <div class="section-tag reveal">Manifesto</div>
+  <div class="manifesto-grid">
+    <div class="manifesto-text">
+      <div class="section-title reveal">Tev<span style="color:var(--cyan)">v</span>io nasceu para quem<br><span class="cyan">vive de vender movimento.</span></div>
+      <p class="reveal">Concessionárias não vendem carros. Vendem liberdade, conquista, o primeiro carro dos filhos, a caminhonete que pagou anos de trabalho. Cada cliente que entra no showroom carrega uma história — e merece uma experiência à altura.</p>
+      <p class="reveal">A tecnologia disponível no mercado foi feita para todo mundo. E por isso não serve bem para ninguém no setor automotivo.</p>
+      <div class="manifesto-hl reveal">"A Tev<span style="color:var(--cyan)">v</span>io foi feita para vocês."</div>
+      <p class="reveal">Desenvolvemos cada solução dentro das concessionárias, ouvindo quem realmente opera. O resultado são ferramentas que o time abraça porque fazem sentido no dia a dia real.</p>
+      <div class="reveal" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#produtos" class="btn-primary">Ver nossos produtos</a>
+        <a href="https://wa.me/5541996800907" class="btn-outline" target="_blank">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="manifesto-img-wrap reveal">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80&fit=crop" alt="Interior de showroom de concessionária"/>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="section-tag reveal">Quem usa, aprova</div>
+  <div class="section-title reveal">O que dizem os <span class="cyan">gestores.</span></div>
+  <p class="section-sub reveal">Feedback real de quem opera concessionárias no dia a dia.</p>
+  <div class="dep-grid">
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">O Audita Fácil mudou completamente nossa rotina de auditoria. O que levava dois dias agora fechamos em menos de quatro horas. O relatório em Excel já sai pronto para enviar à montadora.</p>
+      <div class="dep-author"><div class="dep-avatar">RM</div><div><div class="dep-name">Ricardo Mendes</div><div class="dep-role">Gerente de Qualidade</div></div></div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">O Taggon foi um divisor de águas nos nossos feirões. Saímos de planilhas bagunçadas para um sistema onde todo lead entra organizado e o vendedor já sai do evento com o WhatsApp disparado.</p>
+      <div class="dep-author"><div class="dep-avatar">CF</div><div><div class="dep-name">Camila Ferreira</div><div class="dep-role">Diretora Comercial</div></div></div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Há 7 meses usando o Taggon e o Audita Fácil juntos — e não consigo imaginar a operação sem eles. Dois produtos, resultado imediato.</p>
+      <div class="dep-author"><div class="dep-avatar">LO</div><div><div class="dep-name">Lucas Oliveira</div><div class="dep-role">Gerente de Pós-Vendas</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div style="max-width:760px;margin:0 auto;text-align:center">
+    <div class="section-tag reveal">Dúvidas frequentes</div>
+    <div class="section-title reveal">Perguntas que todo <span class="cyan">gestor faz.</span></div>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item reveal">
+      <button class="faq-q">Precisa de equipe de TI para implantar? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Não. Todos os nossos produtos são SaaS — você acessa pelo navegador ou celular, sem instalação de servidor. Nossa equipe acompanha a implantação e o time já opera no mesmo dia da contratação.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Os produtos têm integração entre si? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Cada produto funciona de forma independente. Juntos, cobrem o ciclo completo da concessionária — do lead captado no evento à fidelização no pós-vendas. A integração é conceitual e de processo, não exige APIs ou configurações técnicas.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Os dados do meu grupo ficam isolados dos outros clientes? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Sim, sempre. Cada grupo tem base de dados exclusiva e completamente isolada. Seguimos rigorosamente a LGPD — seus dados nunca se misturam com os de nenhum outro cliente da Tevvio.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Qual é o modelo de precificação? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Trabalhamos com plano mínimo de 1 ano. O valor varia conforme o produto e o porte do grupo. Entre em contato pelo WhatsApp para receber uma proposta personalizada para a sua operação.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Como funciona o suporte após a contratação? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Suporte direto via WhatsApp com nossa equipe — sem fila de tickets ou chamados. Respondemos rápido porque conhecemos cada detalhe dos produtos. Se surgir uma dúvida na hora da auditoria, a gente resolve na hora.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">TEV<span>V</span>IO</div>
+      <p class="footer-slogan-line">Para quem vive de vender movimento.</p>
+      <p class="footer-about">Três produtos. Um propósito: fazer sua operação rodar mais rápido que a concorrência.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Produtos</h4>
+      <a href="https://tagoon.netlify.app/" target="_blank">Taggon — Captação de Leads</a>
+      <a href="https://auditafacil.netlify.app/" target="_blank">Audita Fácil — Gestão</a>
+      <a href="https://stickercar.netlify.app/" target="_blank">Sticker Car — Fidelização</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <a href="https://wa.me/5541996800907" target="_blank">+55 (41) 99680-0907</a>
+      <a href="mailto:comercial@tevvio.com.br">comercial@tevvio.com.br</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Tev<span style="color:var(--cyan)">v</span>io. Todos os direitos reservados.</div>
+    <div class="footer-copy">CNPJ: 46.934.723/0001-69</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5541996800907" class="wa-float" target="_blank" aria-label="Falar com a Tevvio pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.413A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.29-.174-3.007.854.854-2.939-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.406-5.846c-.241-.12-1.427-.703-1.648-.784-.221-.08-.382-.12-.543.12-.16.241-.623.784-.764.945-.14.16-.281.18-.522.06-.241-.12-1.018-.375-1.94-1.196-.717-.638-1.201-1.427-1.342-1.668-.14-.241-.015-.371.106-.491.109-.108.241-.281.362-.422.12-.14.16-.241.241-.402.08-.16.04-.301-.02-.422-.06-.12-.543-1.307-.744-1.79-.196-.47-.395-.406-.543-.414l-.462-.008c-.16 0-.422.06-.643.301-.221.241-.844.824-.844 2.01 0 1.186.864 2.332.985 2.493.12.16 1.7 2.596 4.12 3.641.576.248 1.025.396 1.375.507.578.184 1.104.158 1.52.096.463-.069 1.427-.583 1.628-1.146.2-.563.2-1.045.14-1.146-.06-.1-.221-.16-.462-.281z"/></svg>
+</a>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+});
+const hamburger=document.getElementById('hamburger');
+const navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{
+  const open=navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open',open);
+  hamburger.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}));
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isMobile=window.innerWidth<768;
+let W,H,pts=[];
+if(!reducedMotion&&!isMobile){
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  for(let i=0;i<70;i++)pts.push({x:Math.random()*1920,y:Math.random()*1080,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35});
+  (function drawP(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,1.8,0,Math.PI*2);ctx.fillStyle='rgba(0,212,255,.55)';ctx.fill()});
+    pts.forEach((a,i)=>pts.slice(i+1).forEach(b=>{const d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(29,107,255,${1-d/130})`;ctx.lineWidth=.5;ctx.stroke()}}));
+    requestAnimationFrame(drawP);
+  })();
+}
+const line1='Tecnologia para ',line2='concessionárias.';
+const full=line1+'\n'+line2;
+let ci=0;
+function tw(){
+  if(ci<=full.length){
+    let disp='';
+    const visible=full.slice(0,ci);
+    const nl=visible.indexOf('\n');
+    if(nl===-1){disp=visible;}
+    else{disp=visible.slice(0,nl)+'<br><span class="cyan">'+visible.slice(nl+1)+'</span>';}
+    if(ci<full.length) disp+='<span style="border-right:3px solid #00D4FF;padding-right:2px"> </span>';
+    document.getElementById('hero-title').innerHTML=disp;
+    ci++;setTimeout(tw,65);
+  } else {
+    document.getElementById('hero-title').innerHTML=line1+'<br><span class="cyan">'+line2+'</span>';
+    const s=document.getElementById('hero-sub'),bt=document.getElementById('hero-btns');
+    s.style.transition='opacity 1s ease,transform 1s ease';s.style.transform='translateY(20px)';
+    setTimeout(()=>{s.style.opacity='1';s.style.transform='translateY(0)'},200);
+    setTimeout(()=>{bt.style.transition='opacity 1s ease';bt.style.opacity='1'},800);
+  }
+}
+setTimeout(tw,600);
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+const co=new IntersectionObserver(e=>e.forEach(x=>{
+  if(x.isIntersecting&&!x.target.dataset.done){
+    x.target.dataset.done='1';
+    const t=+x.target.dataset.target,dur=1500,start=Date.now();
+    (function tk(){const p=Math.min((Date.now()-start)/dur,1);x.target.textContent=Math.floor(p*t);if(p<1)requestAnimationFrame(tk);else x.target.textContent=t;})();
+  }
+}),{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+document.querySelectorAll('.prod-card-big').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(1400px) rotateX(${-y*3}deg) rotateY(${x*3}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+</script>
+</body>
+</html>
