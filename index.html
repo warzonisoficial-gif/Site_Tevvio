@@ -229,14 +229,15 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
   .prod-header{grid-template-columns:1fr}
 }
 .hamburger{display:none}
+nav.menu-open{background:#07080F!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 @media(max-width:768px){
   nav{padding:.85rem 4%}
-  .nav-logo{font-size:1.35rem}
-  .nav-cta{padding:.48rem .95rem;font-size:.78rem;margin-left:auto}
+  .nav-logo{font-size:1.35rem;position:relative;z-index:1002}
+  .nav-cta{padding:.48rem .95rem;font-size:.78rem;margin-left:auto;position:relative;z-index:1002}
   .nav-links{display:none}
-  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,8,15,.98);backdrop-filter:blur(20px);justify-content:center;align-items:center;gap:2.5rem;z-index:999}
-  .nav-links.open a{font-size:1.4rem;color:var(--white)}
-  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:none;padding:.4rem;flex-shrink:0}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;width:100vw;height:100vh;height:100dvh;background:#07080F;justify-content:center;align-items:center;gap:2.2rem;z-index:1000;padding:5rem 2rem 2rem}
+  .nav-links.open a{font-size:1.35rem;font-weight:600;color:var(--white);padding:.4rem 1rem}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;position:relative;z-index:1002;background:none;border:none;padding:.4rem;flex-shrink:0}
   .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
   .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .hamburger.open span:nth-child(2){opacity:0}
@@ -697,17 +698,20 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
 });
+const navbar=document.getElementById('navbar');
 const hamburger=document.getElementById('hamburger');
 const navLinks=document.getElementById('navLinks');
 hamburger.addEventListener('click',()=>{
   const open=navLinks.classList.toggle('open');
   hamburger.classList.toggle('open',open);
+  navbar.classList.toggle('menu-open',open);
   hamburger.setAttribute('aria-expanded',open);
   document.body.style.overflow=open?'hidden':'';
 });
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   navLinks.classList.remove('open');
   hamburger.classList.remove('open');
+  navbar.classList.remove('menu-open');
   hamburger.setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }));
