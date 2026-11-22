@@ -100,12 +100,12 @@ section{padding:5rem 5%}
 .stickercar .pcb-features li .dot{background:#FF8000}
 .stickercar .pcb-cta{color:#FF8000;border-color:rgba(255,128,0,.4);background:rgba(255,128,0,.06)}
 .stickercar .pcb-cta:hover{background:rgba(255,128,0,.14);transform:translateX(5px);box-shadow:0 0 25px rgba(255,128,0,.2)}
-.taggon .pcb-accent{background:linear-gradient(90deg,var(--blue),var(--cyan))}
-.taggon .pcb-badge{background:rgba(0,212,255,.1);color:var(--cyan);border-color:rgba(0,212,255,.3)}
-.taggon .pcb-name{color:var(--cyan)}
-.taggon .pcb-features li .dot{background:var(--cyan)}
-.taggon .pcb-cta{color:var(--cyan);border-color:rgba(0,212,255,.4);background:rgba(0,212,255,.06)}
-.taggon .pcb-cta:hover{background:rgba(0,212,255,.14);transform:translateX(5px);box-shadow:0 0 25px rgba(0,212,255,.2)}
+.annavi .pcb-accent{background:linear-gradient(90deg,#059669,#10B981,#3ECF8E)}
+.annavi .pcb-badge{background:rgba(15,23,42,.85);color:#3ECF8E;border-color:rgba(62,207,142,.38)}
+.annavi .pcb-name{color:#3ECF8E;display:flex;align-items:center;gap:.65rem}
+.annavi .pcb-features li .dot{background:#3ECF8E}
+.annavi .pcb-cta{color:#F8FAFC;border-color:rgba(62,207,142,.45);background:linear-gradient(135deg,#0F172A,rgba(16,185,129,.18))}
+.annavi .pcb-cta:hover{background:rgba(62,207,142,.18);color:#3ECF8E;border-color:#3ECF8E;transform:translateX(5px);box-shadow:0 0 25px rgba(62,207,142,.25)}
 .audita .pcb-accent{background:linear-gradient(90deg,var(--green),#34D399)}
 .audita .pcb-badge{background:rgba(16,185,129,.1);color:var(--green);border-color:rgba(16,185,129,.3)}
 .audita .pcb-name{color:var(--green)}
@@ -131,8 +131,8 @@ section{padding:5rem 5%}
 .eco-node-icon{font-size:2rem;margin-bottom:.6rem}
 .eco-node-name{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.25rem}
 .eco-node-role{font-size:.78rem;color:var(--gray)}
-.eco-node.t{background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.25)}
-.eco-node.t .eco-node-name{color:var(--cyan)}
+.eco-node.t{background:rgba(15,23,42,.75);border:1px solid rgba(62,207,142,.38)}
+.eco-node.t .eco-node-name{color:#3ECF8E}
 .eco-node.a{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.25)}
 .eco-node.a .eco-node-name{color:var(--green)}
 .eco-arrow{color:rgba(0,212,255,.4);font-size:1.8rem;padding:0 1.2rem;align-self:center}
@@ -299,14 +299,32 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
     <p class="section-sub reveal">Cada solução resolve um problema crítico da operação. Funcionam de forma independente — e são ainda mais poderosos juntos.</p>
   </div>
   <div class="prod-showcase">
-    <div class="prod-card-big taggon reveal">
+    <div class="prod-card-big annavi reveal">
       <div class="pcb-img">
         <img loading="lazy" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80&fit=crop" alt="Painel de inteligência de preços e peças OEM Annavi"/>
         <div class="pcb-img-fade"></div>
+        <div class="pcb-accent"></div>
       </div>
       <div class="pcb-body">
         <div class="pcb-badge">INTELIGÊNCIA DE PREÇOS & PEÇAS OEM</div>
-        <div class="pcb-name">Annavi</div>
+        <div class="pcb-name">
+          <svg width="38" height="38" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0">
+            <defs>
+              <linearGradient id="annaviBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0F172A"/><stop offset="100%" stop-color="#090E1A"/></linearGradient>
+              <linearGradient id="annaviLight" x1="12" y1="10" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#3ECF8E"/><stop offset="100%" stop-color="#10B981"/></linearGradient>
+              <linearGradient id="annaviDeep" x1="30" y1="30" x2="52" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#3ECF8E"/><stop offset="100%" stop-color="#047857"/></linearGradient>
+              <linearGradient id="annaviLens" x1="16" y1="16" x2="37" y2="37" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#3ECF8E" stop-opacity="0.28"/><stop offset="100%" stop-color="#059669" stop-opacity="0.04"/></linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="15" fill="url(#annaviBg)"/>
+            <rect x="1" y="1" width="62" height="62" rx="14" stroke="#3ECF8E" stroke-opacity="0.28" stroke-width="1.5"/>
+            <path d="M35.5 31.5L51 47C52.8 48.8 52.8 51.7 51 53.5C49.2 55.3 46.3 55.3 44.5 53.5L29 38L35.5 31.5Z" fill="url(#annaviDeep)"/>
+            <path d="M35.5 31.5L51 47C51.9 47.9 52.3 49.1 52.2 50.3L32.2 34.8L35.5 31.5Z" fill="#6EE7B7" fill-opacity="0.35"/>
+            <circle cx="26" cy="26" r="13.5" fill="url(#annaviLens)" stroke="url(#annaviLight)" stroke-width="5.5"/>
+            <path d="M20.5 22.5C22.2 19.6 25.6 18.2 29.2 19" stroke="#A7F3D0" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="26" cy="26" r="3.2" fill="#3ECF8E"/>
+          </svg>
+          Annavi
+        </div>
         <div class="pcb-tagline">Domine a precificação de peças OEM no Mercado Livre —<br>com margem, velocidade e precisão.</div>
         <p class="pcb-desc">Plataforma de inteligência competitiva e cotação em lote de peças originais (OEM). Audita milhares de códigos em minutos, compara o menor preço Clássico, Premium e Lojas Oficiais e revela onde sua concessionária pode liderar ou subir margem.</p>
         <ul class="pcb-features">
@@ -386,7 +404,21 @@ footer{background:#050609;border-top:1px solid rgba(255,255,255,.07);padding:3.5
     <div class="section-title reveal" style="max-width:600px;margin:0 auto 1rem">Bom com um.<br><span class="cyan">Imbatível com os três.</span></div>
     <p class="section-sub reveal" style="margin:0 auto 2.5rem;max-width:520px">Cada produto funciona de forma independente. Juntos, cobrem a operação de ponta a ponta — da inteligência de preços à fidelização.</p>
     <div class="eco-nodes reveal">
-      <div class="eco-node t"><div class="eco-node-icon">📊</div><div class="eco-node-name">Annavi</div><div class="eco-node-role">Inteligência de preços OEM</div></div>
+      <div class="eco-node t">
+        <div class="eco-node-icon" style="display:flex;justify-content:center">
+          <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="64" height="64" rx="15" fill="url(#annaviBg)"/>
+            <rect x="1" y="1" width="62" height="62" rx="14" stroke="#3ECF8E" stroke-opacity="0.28" stroke-width="1.5"/>
+            <path d="M35.5 31.5L51 47C52.8 48.8 52.8 51.7 51 53.5C49.2 55.3 46.3 55.3 44.5 53.5L29 38L35.5 31.5Z" fill="url(#annaviDeep)"/>
+            <path d="M35.5 31.5L51 47C51.9 47.9 52.3 49.1 52.2 50.3L32.2 34.8L35.5 31.5Z" fill="#6EE7B7" fill-opacity="0.35"/>
+            <circle cx="26" cy="26" r="13.5" fill="url(#annaviLens)" stroke="url(#annaviLight)" stroke-width="5.5"/>
+            <path d="M20.5 22.5C22.2 19.6 25.6 18.2 29.2 19" stroke="#A7F3D0" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="26" cy="26" r="3.2" fill="#3ECF8E"/>
+          </svg>
+        </div>
+        <div class="eco-node-name">Annavi</div>
+        <div class="eco-node-role">Inteligência de preços OEM</div>
+      </div>
       <div class="eco-arrow">→</div>
       <div class="eco-node a"><div class="eco-node-icon">✅</div><div class="eco-node-name">Audita Fácil</div><div class="eco-node-role">Garante a operação pronta</div></div>
       <div class="eco-arrow">→</div>
