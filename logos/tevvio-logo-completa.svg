@@ -1,0 +1,26 @@
+<svg width="1600" height="480" viewBox="0 0 320 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="16" y1="16" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D1220"/>
+      <stop offset="100%" stop-color="#07080F"/>
+    </linearGradient>
+    <linearGradient id="backV" x1="42" y1="30" x2="68" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1D6BFF"/>
+      <stop offset="100%" stop-color="#071C5E"/>
+    </linearGradient>
+    <linearGradient id="frontV" x1="28" y1="28" x2="54" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="50%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#1D6BFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="96" rx="20" fill="#07080F"/>
+  <g transform="translate(16, 16)">
+    <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+    <rect x="1" y="1" width="62" height="62" rx="14" stroke="#00D4FF" stroke-opacity="0.28" stroke-width="1.5"/>
+    <path d="M50.5 14C52.6 14 53.9 16.3 52.9 18.2L36.2 50.8C35.1 52.9 32 52.1 32 49.7V31.5L43.2 15.2C43.8 14.4 44.7 14 45.7 14H50.5Z" fill="url(#backV)"/>
+    <path d="M13.5 14C11.4 14 10.1 16.3 11.1 18.2L27.8 50.8C28.9 52.9 32 52.1 32 49.7V30.8L20.8 15.2C20.2 14.4 19.3 14 18.3 14H13.5Z" fill="url(#frontV)"/>
+    <path d="M32 30.8L37.4 39.2L32 49.7V30.8Z" fill="#00D4FF" fill-opacity="0.32"/>
+  </g>
+  <text x="98" y="62" font-family="'Space Grotesk', 'Inter', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="4" fill="#FFFFFF">TEV<tspan fill="#00D4FF">V</tspan>IO</text>
+</svg>
