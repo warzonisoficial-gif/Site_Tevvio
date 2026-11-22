@@ -1,0 +1,27 @@
+<svg width="2048" height="2048" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cpBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C120B"/>
+      <stop offset="100%" stop-color="#0B0908"/>
+    </linearGradient>
+    <linearGradient id="cpPrimary" x1="12" y1="10" x2="38" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FED7AA"/>
+      <stop offset="42%" stop-color="#FF8000"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="cpSecondary" x1="28" y1="18" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF8000"/>
+      <stop offset="55%" stop-color="#C2410C"/>
+      <stop offset="100%" stop-color="#431407" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cpEdge" x1="32" y1="10" x2="32" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF7ED" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FF8000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#cpBg)" stroke="#FF8000" stroke-opacity="0.32" stroke-width="1.5"/>
+  <path d="M32 11C41.9 11 50 19.1 50 29C50 38.8 38.2 50.1 33.8 53.9C32.5 55 30.5 54.1 30.5 52.4V33.5H39.5C41.2 33.5 42.1 31.5 41 30.2L29.5 16.5V11.2C30.3 11.1 31.1 11 32 11Z" fill="url(#cpSecondary)"/>
+  <path d="M32 11C22.1 11 14 19.1 14 29C14 38.8 25.8 50.1 30.2 53.9C31.5 55 33.5 54.1 33.5 52.4V29.5H24.5C22.8 29.5 21.9 31.5 23 32.8L33.5 45.5V11.1C33 11 32.5 11 32 11Z" fill="url(#cpPrimary)"/>
+  <circle cx="32" cy="27" r="4.8" fill="#0F0B08" stroke="url(#cpEdge)" stroke-width="1.6"/>
+  <circle cx="32" cy="27" r="2.2" fill="#FFB347"/>
+</svg>
